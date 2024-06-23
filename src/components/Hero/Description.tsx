@@ -8,7 +8,10 @@ export default function Description() {
 				<h1 className="flex text-2xl font-semibold pb-1 lg:text-4xl lg:pb-2">
 					We serve the richest coffe in the city!
 				</h1>
-				<Button text="Order Now" color="bg-white" />
+				<Button
+					text="Order Now"
+					styles="bg-white text-black text-xs rounded-full py-2 px-4 hover:bg-[var(--brown-primary)] "
+				/>
 			</div>
 		</section>
 	);

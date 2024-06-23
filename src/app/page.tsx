@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner/Banner";
 import Coffees from "@/components/Banner/Coffees";
+import Catalogo from "@/components/Catalogo/Catalogo";
 import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
 			<Banner>
 				<Coffees />
 			</Banner>
+			<Catalogo />
 		</>
 	);
 }
