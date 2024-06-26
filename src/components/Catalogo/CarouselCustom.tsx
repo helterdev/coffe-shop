@@ -7,33 +7,30 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import Card from "./Card/Card";
+import { ImageTypeArray } from "@/types/Images";
 
-export default function CarouselCustom() {
+type CarouselCustomProps = {
+	products: ImageTypeArray;
+};
+
+export default function CarouselCustom({ products }: CarouselCustomProps) {
 	return (
 		<>
-			<Carousel className="w-full max-w-sm">
-				<CarouselContent className="w-[150px] -ml-2 md:-ml-4">
-					<CarouselItem className="pl-2 md:pl-4">
-						<Card />
-					</CarouselItem>
-					<CarouselItem className="pl-2 md:pl-4">
-						<Card />
-					</CarouselItem>
-					<CarouselItem className="pl-2 md:pl-4">
-						<Card />
-					</CarouselItem>
-					<CarouselItem className="pl-2 md:pl-4">
-						<Card />
-					</CarouselItem>
-					<CarouselItem className="pl-2 md:pl-4">
-						<Card />
-					</CarouselItem>
-					<CarouselItem className="pl-2 md:pl-4">
-						<Card />
-					</CarouselItem>
+			<Carousel className="w-full transition-all">
+				<CarouselContent className="">
+					{products.map((item, index) => {
+						return (
+							<CarouselItem
+								className="basis-48 md:basis-64 md:pl-4"
+								key={index}
+							>
+								<Card image={item} />
+							</CarouselItem>
+						);
+					})}
 				</CarouselContent>
-				<CarouselPrevious className="hidden" />
-				<CarouselNext className="hidden" />
+				<CarouselPrevious className="hidden lg:flex" />
+				<CarouselNext className="hidden lg:flex" />
 			</Carousel>
 		</>
 	);

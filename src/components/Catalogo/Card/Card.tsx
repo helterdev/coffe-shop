@@ -1,29 +1,44 @@
 import Button from "@/components/Button/Button";
 import Image from "next/image";
-export default function Card() {
+import Heart from "../Heart";
+import { ImageType } from "@/types/Images";
+
+type CardProps = {
+	image: ImageType;
+};
+
+export default function Card({ image }: CardProps) {
 	return (
 		<div className="bg-[var(--brown-primary)] p-2 rounded">
-			<div>
+			<div className="relative">
+				<Heart />
 				<Image
-					src={"/coffe-late.jpg"}
+					src={image.url}
 					sizes="100vw"
 					style={{
 						width: "100%",
-						height: "auto",
 						borderRadius: "4px",
-						filter: "saturate(150%)",
+						filter: "saturate(150%) brightness(90%)",
+						position: "relative",
 					}}
+					className="h-[240px] md:min-h-[336px]"
 					width={500}
 					height={300}
-					alt="chocolate"
+					quality={100}
+					alt={image.alt}
 				/>
+
 				<div>
 					<h4 className="text-base font-semibold text-[var(--brown-secundary)]">
-						Titulo
+						{image.title}
 					</h4>
-					<p className="text-xs font-light">Descripcion</p>
+					<p className="h-8 text-xs font-light box-border overflow-hidden">
+						{image.description}
+					</p>
 					<div className="flex items-center justify-between pt-1">
-						<span className="text-base font-semibold">199$</span>
+						<span className="text-base text-[var(--brown-secundary)] font-semibold">
+							{image.price}$
+						</span>
 
 						<Button
 							text="Order Now"
