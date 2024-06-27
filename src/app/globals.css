@@ -76,6 +76,6 @@
       @apply border-border box-border;
     }
     body {
-      @apply bg-background text-[var(--primary-white)];
+      @apply bg-[var(--primary-white)] text-[var(--primary-white)];
     }
   }

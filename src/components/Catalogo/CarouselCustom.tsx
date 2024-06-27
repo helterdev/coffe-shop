@@ -17,7 +17,7 @@ export default function CarouselCustom({ products }: CarouselCustomProps) {
 	return (
 		<>
 			<Carousel className="w-full transition-all">
-				<CarouselContent className="">
+				<CarouselContent>
 					{products.map((item, index) => {
 						return (
 							<CarouselItem
@@ -29,8 +29,8 @@ export default function CarouselCustom({ products }: CarouselCustomProps) {
 						);
 					})}
 				</CarouselContent>
-				<CarouselPrevious className="hidden lg:flex" />
-				<CarouselNext className="hidden lg:flex" />
+				<CarouselPrevious className="hidden " />
+				<CarouselNext className="hidden " />
 			</Carousel>
 		</>
 	);

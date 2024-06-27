@@ -6,7 +6,7 @@ interface BannerProps {
 
 export default function Banner({ children }: BannerProps) {
 	return (
-		<section className="w-full h-32 bg-[var(--brown-primary)]">
+		<section className="w-full h-32 bg-[var(--brown-primary)] lg:min-h-48">
 			{children}
 		</section>
 	);
