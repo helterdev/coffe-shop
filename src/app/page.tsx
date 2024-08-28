@@ -3,6 +3,7 @@ import CoffieBeans from "@/components/Banner/CoffeBeans/CoffeBeans";
 import Coffees from "@/components/Banner/Coffees";
 import Catalogo from "@/components/Catalogo/Catalogo";
 import Hero from "@/components/Hero/Hero";
+import Reviews from "@/components/Reviews/Reviews";
 
 export default function Home() {
 	return (
@@ -15,6 +16,7 @@ export default function Home() {
 			<Banner>
 				<CoffieBeans />
 			</Banner>
+			<Reviews />
 		</>
 	);
 }

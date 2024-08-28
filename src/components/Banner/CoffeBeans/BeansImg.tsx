@@ -6,7 +6,7 @@ type BeansImgProps = {
 };
 export default function BeansImg({ url, alt }: BeansImgProps) {
 	return (
-		<div className="w-full h-full">
+		<div className="w-full h-full relative">
 			<Image
 				src={url}
 				alt={alt}
@@ -16,6 +16,7 @@ export default function BeansImg({ url, alt }: BeansImgProps) {
 					objectFit: "cover",
 					height: "100%",
 				}}
+				priority
 			/>
 		</div>
 	);

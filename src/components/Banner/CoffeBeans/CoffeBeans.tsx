@@ -4,7 +4,7 @@ import Description from "./Description";
 export default function CoffieBeans() {
 	return (
 		<div className="w-full h-full flex justify-between items-center">
-			<div className="relative w-44 h-full hidden md:block">
+			<div className="relative w-44 h-full">
 				<BeansImg url="/granosdecafe2.png" alt="grano de cafe" />
 			</div>
 			<Description />
