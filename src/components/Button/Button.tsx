@@ -7,6 +7,7 @@ interface ButtonProps {
 }
 
 export default function Button({ styles, text, type }: ButtonProps) {
+	//example of merge
 	return (
 		<button
 			className={`${styles} transition-all active:scale-[0.9]`}
